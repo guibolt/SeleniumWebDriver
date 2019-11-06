@@ -7,15 +7,16 @@ using System.Text;
 
 namespace Alura.LeilaoOnline.Selenium.Fixtures
 {
-    public class TextFixture : IDisposable
+    public class TestFixture : IDisposable
     {
         public IWebDriver Driver { get; private set; }
 
         //Setup
-        public TextFixture() => Driver = new ChromeDriver(TestHelper.PastaDoExecutavel);
+        public TestFixture() => Driver = new ChromeDriver(TestHelper.PastaDoExecutavel);
+        
 
-
-        //TearDown 
+        //TearDown
         public void Dispose() => Driver.Quit();
+        
     }
 }
